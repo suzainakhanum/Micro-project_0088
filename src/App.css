@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #171717;
+}
+
+
+/* =================================
+   MAIN PAGE
+================================= */
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 90px;
+
+  padding: 60px;
+
+  background:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(125, 40, 180, 0.25),
+      transparent 30%
+    ),
+    #171717;
+}
+
+
+/* =================================
+   CARDS AREA
+================================= */
+
+.cards-area {
+  width: 520px;
+
+  height: 500px;
+
+  position: relative;
+}
+
+
+/* =================================
+   COMMON CARD
+================================= */
+
+.credit-card {
+  width: 430px;
+
+  height: 260px;
+
+  border-radius: 18px;
+
+  position: absolute;
+
+  overflow: hidden;
+
+  color: white;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.45);
+
+  background:
+    linear-gradient(
+      135deg,
+      #34104f,
+      #6a1b9a,
+      #3f51b5,
+      #e91e63
+    );
+}
+
+
+/* =================================
+   FRONT CARD
+================================= */
+
+.front-card {
+
+  top: 20px;
+
+  left: 0;
+
+  z-index: 2;
+
+  padding: 30px;
+}
+
+
+/* Decorative circle */
+
+.front-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+
+  height: 190px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+
+  top: -80px;
+
+  right: -40px;
+}
+
+
+/* =================================
+   CARD TOP
+================================= */
+
+.card-top {
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+}
+
+
+/* Main circle */
+
+.card-circle {
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  background: #eeeeee;
+
+  margin-right: 12px;
+}
+
+
+/* Small circle */
+
+.small-circle {
+
+  width: 15px;
+
+  height: 15px;
+
+  border-radius: 50%;
+
+  border: 1px solid #eeeeee;
+
+  opacity: 0.7;
+}
+
+
+/* VISA */
+
+.visa {
+
+  position: absolute;
+
+  right: 0;
+
+  top: 0;
+
+  font-size: 30px;
+
+  font-weight: bold;
+
+  font-style: italic;
+}
+
+
+/* =================================
+   CARD NUMBER
+================================= */
+
+.card-number {
+
+  margin-top: 45px;
+
+  font-size: 23px;
+
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+}
+
+
+/* =================================
+   FRONT BOTTOM
+================================= */
+
+.front-bottom {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-top: 30px;
+}
+
+
+.front-bottom span {
+
+  display: block;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  opacity: 0.8;
+
+  margin-bottom: 5px;
+}
+
+
+.front-bottom h3 {
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =================================
+   BACK CARD
+================================= */
+
+.back-card {
+
+  top: 180px;
+
+  left: 50px;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eeeeee,
+      #d0d0d0
+    );
+
+  color: #444;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =================================
+   MAGNETIC STRIP
+================================= */
+
+.magnetic-strip {
+
+  width: 100%;
+
+  height: 55px;
+
+  margin-top: 25px;
+
+  background: #222;
+}
+
+
+/* =================================
+   BACK CONTENT
+================================= */
+
+.back-content {
+
+  padding: 20px 35px;
+}
+
+
+.cvv-label {
+
+  display: block;
+
+  font-size: 10px;
+
+  color: #555;
+
+  margin-bottom: 5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =================================
+   CVV BOX
+================================= */
+
+.cvv-box {
+
+  width: 100%;
+
+  height: 30px;
+
+  background: #9ca3af;
+
+  border-radius: 3px;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  padding-right: 15px;
+
+  font-size: 12px;
+
+  color: #eeeeee;
+
+  font-weight: bold;
+}
+
+
+/* =================================
+   BACK LINES
+================================= */
+
+.back-lines {
+
+  margin-top: 15px;
+
+  display: flex;
+
+  gap: 5px;
+
+  justify-content: center;
+}
+
+
+.back-lines span {
+
+  width: 80px;
+
+  height: 3px;
+
+  background: #9ca3af;
+
+  border-radius: 5px;
+}
+
+
+.back-lines span:nth-child(2) {
+
+  width: 25px;
+}
+
+
+.back-lines span:nth-child(3) {
+
+  width: 35px;
+}
+
+
+/* =================================
+   FORM CARD
+================================= */
+
+.details-card {
+
+  width: 450px;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+
+.details-card h1 {
+
+  text-align: center;
+
+  font-size: 32px;
+
+  margin-bottom: 35px;
+
+  color: #222;
+}
+
+
+/* =================================
+   FORM GROUP
+================================= */
+
+.form-group {
+
+  margin-bottom: 22px;
+}
+
+
+.form-group label {
+
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  color: #222;
+
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+}
+
+
+.form-group input {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: 1px solid #d0d0d0;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  color: #222;
+}
+
+
+.form-group input:focus {
+
+  border-color: #8a2be2;
+
+  box-shadow:
+    0 0 5px rgba(138, 43, 226, 0.25);
+}
+
+
+/* =================================
+   EXPIRY + CVV
+================================= */
+
+.form-row {
+
+  display: flex;
+
+  gap: 20px;
+}
+
+
+.form-row .form-group {
+
+  flex: 1;
+}
+
+
+.expiry-inputs {
+
+  display: flex;
+
+  gap: 10px;
+}
+
+
+.expiry-inputs input {
+
+  width: 50%;
+}
+
+
+/* =================================
+   ERROR
+================================= */
+
+.error {
+
+  color: #e63946;
+
+  font-size: 13px;
+
+  margin-top: 6px;
+}
+
+
+/* =================================
+   CONFIRM BUTTON
+================================= */
+
+.confirm-btn {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7b2ff7,
+      #f107a3
+    );
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  margin-top: 5px;
+}
+
+
+.confirm-btn:hover {
+
+  opacity: 0.9;
+}
+
+
+/* =================================
+   SUCCESS
+================================= */
+
+.success-toast {
+
+  position: fixed;
+
+  top: 30px;
+
+  right: 30px;
+
+  background: #22c55e;
+
+  color: white;
+
+  padding: 15px 25px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.3);
+
+  z-index: 100;
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1050px) {
+
+  .app {
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    padding: 40px 20px;
+  }
+
+  .cards-area {
+
+    width: 520px;
+
+    height: 480px;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .cards-area {
+
+    width: 100%;
+
+    height: 450px;
+  }
+
+  .credit-card {
+
+    width: 90%;
+
+    height: 230px;
+  }
+
+  .front-card {
+
+    left: 0;
+  }
+
+  .back-card {
+
+    left: 30px;
+
+    top: 160px;
+  }
+
+  .card-number {
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+  }
+
+  .details-card {
+
+    width: 100%;
+
+    padding: 25px;
+  }
+}
